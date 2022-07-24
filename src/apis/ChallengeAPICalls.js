@@ -20,7 +20,7 @@ export function callGetChallengeInfoAPI(challengeNo) {
 
 export function checkChallengeAuthByMemberNoAPI(authInfo) {
 
-    let CHECK_AUTH_URL = 'http://43.200.152.176:8888/challenges/checkAuth';
+    let CHECK_AUTH_URL = 'http://43.200.152.176:8888/challenges/checkAuth'; 
 
     return async function checkAuth(dispatch, getState) {
         const result = await axios.get(CHECK_AUTH_URL, { params: {authInfo: authInfo}}).catch(err => console.log(err));
